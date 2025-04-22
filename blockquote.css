@@ -1,0 +1,13 @@
+.deskripsi {
+    text-align: left;
+    padding: 29px;
+    padding-top: 55px;
+    font-size: 21px;
+    color: rgb(116, 116, 116);
+}
+.nama {
+    text-align: right;
+    padding: 29px;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+}
