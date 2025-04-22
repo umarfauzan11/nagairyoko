@@ -53,4 +53,33 @@
     transform: scale(1.02);
   }
   
+  .backgroundop {
+    background: url(image/pohonnagairyoko.png);
+    width: 900px;
+  }
+
+  .tab1{
+    background-color: #ffffff;
+    transition: 0.5s;
+  }
+  .tab1:hover{
+    background-color: #dadada;
+  }
+
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in-up.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  img {
+    pointer-events: none;
+  }
+  
+  
   

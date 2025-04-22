@@ -16,7 +16,7 @@
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg py-3 sticky-top backdrop-blur">
+  <nav class="navbar navbar-expand-lg py-3 sticky-top backdrop-blur fade-in-up">
     <div class="container d-flex justify-content-between align-items-center">
       <ul class="navbar-nav flex-row gap-3">
         <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
@@ -33,11 +33,10 @@
     </div>
   </nav>
   
-
   <!-- Hero Section -->
-  <section class="hero py-5" style="margin: 90px;">
+  <section class="hero py-5" style="margin-left: 100px; padding: 90px;">
     <div class="container">
-      <div class="row align-items-center">
+      <div class="row align-items-center" style="padding-top: 170px; padding-bottom: 200px;">
         <!-- Text kiri -->
         <div class="col-md-6">
           <p class="lead">Read Now</p>
@@ -54,7 +53,7 @@
     </div>
   </section>
 
-  <article style="display: flex; align-items: center; gap: 30px; background-color: #4fc3f7; padding: 30px; border-radius: 30px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); max-width: 1000px; margin: auto; flex-wrap: wrap;">
+  <article class="fade-in-up" style="display: flex; align-items: center; gap: 30px; background-color: #4fc3f7; padding: 30px; border-radius: 30px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); max-width: 1000px; margin: auto; flex-wrap: wrap;">
   
     <!-- Gambar Buku -->
     <div style=" padding: 20px; border-radius: 20px;">
@@ -74,17 +73,45 @@
 
   <div class="card-container">
     <!-- Kartu 1 -->
-    <div class="image-card hover-text interactive-div" style="background-color: #4fc3f7;">
+    <div class="image-card hover-text interactive-div fade-in-up" style="background-color: #4fc3f7;">
       <img src="image/buku.png" alt="Book Cover">
       <div class="overlay-text">READ NOW</div>
     </div>
   
     <!-- Kartu 2 -->
-    <div class="image-card hover-text interactive-div" style="background-color: #4fc3f7;">
+    <div class="image-card hover-text interactive-div fade-in-up" style="background-color: #4fc3f7;">
       <img src="image/pohonnagairyoko.png" alt="Game GTX">
       <div class="overlay-text">SEE MY GAMES</div>
     </div>
   </div>
+
+  <section class="" style="text-align: center; background: linear-gradient(0deg,rgba(79, 195, 247, 1) 0%, rgba(255, 255, 255, 1) 100%);">
+    <div class="container">
+      <div class="row align-items-center">
+        <p class="lead">Available On</p>
+          <h1 class="display-4 fw-bold fade-in-up">Wattpad and More Platform</h1>
+          <div>
+            <a href="#" class="btn btn-dark">See In Wattpad</a>
+            </div>
+          <img class="fade-in-up" src="image/buku.png" alt="" style="width: 900px; align-items: center; margin: auto;">
+          <p class="my-4">"Nagai Ryoko - 長い旅行"</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="text-align: center; background: linear-gradient(180deg,rgba(79, 195, 247, 1) 0%, rgba(255, 255, 255, 1) 100%);">
+    <div class="container d-flex" style="padding: 90px; gap: 12px;">
+      <div class="image-card hover-text interactive-div tab1 fade-in-up" style="align-items: center; margin: auto;">
+
+      </div>
+      <div class="image-card hover-text interactive-div tab1 fade-in-up" style="align-items: center; margin: auto;">
+
+      </div>
+      <div class="image-card hover-text interactive-div tab1 fade-in-up" style="align-items: center; margin: auto;">
+
+      </div>
+    </div>
+  </section>
 
   <footer>
     <div class="footer-container">
@@ -106,7 +133,7 @@
             <h4>Social</h4>
             <a href="#">Instagram</a>
             <a href="#">YouTube</a>
-            <a href="#">GitHub</a>
+            <a href="https://github.com/umarfauzan11">GitHub</a>
           </div>
           <div class="link-column">
             <h4>Support</h4>
@@ -124,5 +151,29 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+  
+    document.querySelectorAll('.fade-in-up').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+
+  <script>
+  document.addEventListener('contextmenu', function(e) {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault();
+    }
+  });
+</script>
+
+  
 </body>
 </html>
